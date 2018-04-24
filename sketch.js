@@ -1,5 +1,5 @@
 function setup() {
-createCanvas(500,500)
+createCanvas(windowWidth,windowHeight)
 mic = new p5.AudioIn()
 mic.start()
 }
@@ -18,4 +18,7 @@ function draw() {
           ellipse(350,230,adjustedMicLevel)
           ellipse(50,230,adjustedMicLevel)
             ellipse(450,230,adjustedMicLevel)
+}
+function windowResized() {
+  resizeCanvas(windowWidth,windowHeight);
 }
